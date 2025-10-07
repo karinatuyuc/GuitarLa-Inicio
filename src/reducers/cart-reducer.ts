@@ -1,4 +1,5 @@
-import { Guitar } from '../types/index';
+import { db } from "../data/db";
+import { CartItem, Guitar } from '../types/index';
 
 export type CartActions = 
     { type: 'add-to-cart', payload: {item : Guitar}} |
@@ -6,3 +7,15 @@ export type CartActions =
     { type: 'decrease-quantity', payload: {id: Guitar['id']}} |
     { type: 'increase-quantity', payload: {id: Guitar['id']}} |
     { type: 'clear-cart'}
+
+//Creando type para el estado
+export type CartState = {
+    data: Guitar[],
+    cart: CartItem[]
+}
+
+//creando el estado inicial
+export const initialState : CartState = {
+    data: db,
+    cart: []
+}
