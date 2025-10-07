@@ -1,6 +1,12 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# GuitarLa - Version Refactorizada con useReducer
+
+Este proyecto es una version refactorizada del original **GuitarLa** construido con React y TypeScript. En esta version se implementa 'useReducer' para manejar el estado del carrito de compras de forma mas escalable y estructurada.
+
+## Por que esta version?
+
+El objetivo
 
 Currently, two official plugins are available:
 
