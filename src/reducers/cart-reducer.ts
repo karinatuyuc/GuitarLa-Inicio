@@ -18,4 +18,12 @@ export type CartState = {
 export const initialState : CartState = {
     data: db,
     cart: []
+};
+
+//creando el reducer
+export const cartReducer = (
+    state: CartState = initialState,
+    action: CartActions
+) => {
+
 }
