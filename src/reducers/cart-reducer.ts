@@ -25,5 +25,7 @@ export const cartReducer = (
     state: CartState = initialState,
     action: CartActions
 ) => {
+    //Aqui va las funciones que actticvaran las acciones
+    // que definismos en el type CartActions
 
 }
