@@ -14,18 +14,49 @@ export type CartState = {
     cart: CartItem[]
 }
 
-//creando el estado inicial
 export const initialState : CartState = {
     data: db,
-    cart: [] // array vacio para almacenar los items del carrito
-};
+    cart: []
+}
 
-//creando el reducer
 export const cartReducer = (
-    state: CartState = initialState,
-    action: CartActions
-) => {
-    //Aqui va las funciones que actticvaran las acciones
-    // que definismos en el type CartAction
+    //Recibe el estado y la accion
+      state: CartState = initialState,
+      action: CartActions
+
+   ) => {
+
+     if(action.type === "add-to-cart") {
+        return {
+            ...state,
+
+        }
+     }
+
+     if(action.type === "remove-from-cart") {
+        return  {
+            ...state,
+        }
+     }
+
+     if(action.type === "decrease-quantity") {
+        return {
+            ...state,
+        }
+     }
+
+     if(action.type === "increase-quantity") {
+        return {
+            ...state,
+        }
+     }
+
+     if(action.type === "clear-cart") {
+        return {
+            ...state,
+        }
+     }
+
+     return state;
 
 }
