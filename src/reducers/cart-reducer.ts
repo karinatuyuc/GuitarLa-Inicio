@@ -51,9 +51,6 @@ export const cartReducer = (
             const newItem: CartItem = {...action.payload.item, quantity: 1}
             updatedCart = [...state.cart, newItem]
         }
-
-
-
         return {
             ...state,
             cart: updatedCart
@@ -61,9 +58,12 @@ export const cartReducer = (
         }
      }
 
+
      if(action.type === "remove-from-cart") {
+        const cart = state.cart.filter( item => item.id !== action.payload.id)
         return  {
             ...state,
+            cart //Solo podemos usar el nombre si es igual al nombre de la propiedad
         }
      }
 
