@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import type { Guitar, CartItem } from '../types'
+import type { CartItem } from '../types'
 
 export const useCart = () => {
 
@@ -15,13 +15,9 @@ export const useCart = () => {
     }, [cart])
 
 
-    function clearCart() {
-        setCart([])
-    }
-
 
     return {
-        cart,
-        clearCart
+        cart
+        
     }
 }
